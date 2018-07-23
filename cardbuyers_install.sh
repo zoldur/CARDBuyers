@@ -10,7 +10,7 @@ COIN_TGZ='https://github.com/zoldur/CARDBuyers/releases/download/v1.0.1.0/CARDbu
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='CARDbuyers'
 COIN_PORT=48465
-RPC_PORT=48465
+RPC_PORT=48466
 
 NODEIP=$(curl -s4 api.ipify.org)
 
