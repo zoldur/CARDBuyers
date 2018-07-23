@@ -20,16 +20,13 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 function download_node() {
-  echo -e "Prepare to download ${GREEN}$COIN_NAME${NC}."
+  echo -e "Downloading ${GREEN}$COIN_NAME${NC}."
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
+  tar xvzf $COIN_ZIP -C $COIN_PATH>/dev/null 2>&1
   compile_error
-  cd linux
-  chmod +x $COIN_DAEMON
-  cp $COIN_DAEMON $COIN_PATH
-  cd ~ >/dev/null 2>&1
+  cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
