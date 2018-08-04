@@ -119,7 +119,7 @@ logintimestamps=1
 maxconnections=16
 #bind=$NODEIP
 masternode=1
-externalipr=$NODEIP:$COIN_PORT
+externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
 
 #addnode=54.38.184.8
