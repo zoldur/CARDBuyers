@@ -9,8 +9,8 @@ COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/CARDbuyers/BCARD/releases/download/Wallet/CARDbuyersd.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='CARDbuyers'
-COIN_PORT=48465
-RPC_PORT=48466
+COIN_PORT=48451
+RPC_PORT=48452
 
 NODEIP=$(curl -s4 api.ipify.org)
 
@@ -119,13 +119,13 @@ logintimestamps=1
 maxconnections=256
 #bind=$NODEIP
 masternode=1
-masternodeaddr=$NODEIP:$COIN_PORT
+externalipr=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
 
-addnode=54.38.184.8
-addnode=164.132.195.139
-addnode=51.38.50.213
-addnode=79.137.37.245
+#addnode=54.38.184.8
+#addnode=164.132.195.139
+#addnode=51.38.50.213
+#addnode=79.137.37.245
 EOF
 }
 
